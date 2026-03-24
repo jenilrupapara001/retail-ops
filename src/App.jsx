@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { SidebarProvider, useSidebar } from './contexts/SidebarContext';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -136,6 +137,7 @@ function App() {
           <ToastProvider>
             <GlobalNotificationListener />
             <AppRoutes />
+            <Analytics />
           </ToastProvider>
         </SidebarProvider>
       </SocketProvider>
