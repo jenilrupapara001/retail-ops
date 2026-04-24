@@ -172,6 +172,7 @@ const PORT = process.env.PORT || 3001;
 const http = require('http');
 console.log('📡 Creating HTTP server...');
 const server = http.createServer(app);
+server.timeout = 300000; // 5 minutes in milliseconds
 
 // --- Socket.io Integration ---
 console.log('📡 Initializing Socket.io...');
